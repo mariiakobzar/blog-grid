@@ -1,0 +1,201 @@
+* {
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'hans_kendrickregular';
+    src: url('../font/hanskendrick-regular-webfont.woff2') format('woff2'),
+    url('../font/hanskendrick-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html {
+    font-size: 12px;
+}
+
+body {
+    background-color: #e2e7ec;
+    margin: 0;
+    color: #1d1d1d;
+    font-family: 'hans_kendrickregular', Helvetica, sans-serif;
+    padding-top: 5.625vw;
+    font-size: 1rem;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    display: inline-block;
+    max-width: 100%;
+    width: 100%;
+}
+
+.ba-container {
+    max-width: 1140px;
+    padding: 0 10px;
+    margin: 0 auto;
+}
+
+.ba-row {
+    display: flex;
+    margin: 0 -10px;
+    flex-wrap: wrap;
+}
+
+.ba-col {
+    width: 100%;
+    padding: 0 10px;
+    margin-bottom: 20px;
+}
+
+.article {
+    width: 100%;
+    background-color: white;
+}
+
+.article_big {
+    height: 100%;
+    position: relative;
+    flex-grow: 1;
+}
+
+.article__info {
+    padding: 0 1.56rem 1.56rem;
+}
+
+.article-author__img {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+}
+
+.article_big:before {
+    content: '';
+    position: absolute;
+    top: 50px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-image: linear-gradient(transparent, rgba(0, 0, 0, 1));
+}
+
+.article_big .article__info {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 0 0 20px 40px;
+}
+
+.article__title {
+    text-transform: uppercase;
+    font-size: 1.3636rem;
+    line-height: 1.375;
+    margin: 0 0 2.0666em;
+}
+
+.article__time {
+    text-transform: uppercase;
+    font-size: 0.8126rem;
+    line-height: 2.3;
+    color: #818181;
+}
+
+.article__time_none {
+    opacity: 0;
+}
+
+.article__title_big {
+    font-size: 1.875rem;
+    line-height: 1.2;
+    width: 70%;
+    color: #fff;
+    margin: 0;
+}
+
+.visually-hidden {
+    position: absolute !important;
+    clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+    clip: rect(1px, 1px, 1px, 1px);
+    padding: 0 !important;
+    border: 0 !important;
+    height: 1px !important;
+    width: 1px !important;
+    overflow: hidden;
+}
+
+@media screen and (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+    .ba-col {
+        width: 50%;
+        min-height: 33.75rem;
+    }
+    .ba-col_big {
+        flex-basis: 100%;
+        flex-grow: 1;
+    }
+    .article-author {
+        position: absolute;
+        bottom: 3%;
+    }
+    .article {
+        position: relative;
+        height: 100%;
+    }
+
+    .article__info {
+        margin-top: 1.68rem;
+    }
+    .article__big .article__info {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 70%;
+    }
+    .article-title {
+        margin-bottom: 3.0666em;
+    }
+    .article__big {
+        min-height: 33.75rem;
+    }
+    .article__img--cover {
+        min-height: 33.75rem;
+    }
+}
+
+@media screen and (min-width: 1023px) {
+
+    html {
+        font-size: 16px;
+    }
+
+    .ba-col {
+        width: 33.333333%;
+    }
+
+    .ba-col_big {
+        width: auto;
+        flex-grow: 1;
+        flex-basis: 66.04%;
+    }
+
+    .article {
+        position: relative;
+        height: 100%;
+    }
+
+    .article-title {
+        margin-bottom: 3.0666em;
+    }
+
+    .article__info {
+        margin-top: 1.68rem;
+    }
+
+}
